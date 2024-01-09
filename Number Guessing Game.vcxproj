@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="Number Guessing Game.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ABODAstd.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

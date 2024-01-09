@@ -1,27 +1,8 @@
 #include<iostream>
 #include<cstdlib>
+#include"ABODAstd.h"
 
 using namespace std;
-
-short RandomNumber(short From, short To)
-{
-	short RandomNumber = rand() % (To - From + 1) + From;
-
-	return RandomNumber;
-}
-
-short ValidateNumberInRange(short From, short To)
-{
-	short Number;
-	do
-	{
-		cout << "GUESS A NUMBER BETWEEN " << From << " & " << To << "\n";
-		cin >> Number;
-
-	} while (Number < From || Number > To);
-
-	return Number;
-}
 
 void IsYourAnswerRight(short RealAnswer, short UserAnswer)
 {
@@ -39,28 +20,6 @@ void IsYourAnswerRight(short RealAnswer, short UserAnswer)
 	else
 	{
 		cout << "THE REAL NUMBER IS SMALLER THAN " << UserAnswer << "\n";
-	}
-}
-
-bool DoYouWantToPlayAgain()
-{
-	string Choice;
-	do
-	{
-		cout << "DO YOU WANT TO PLAY AGAIN[Y/N]\n";
-		cin >> Choice;
-	} while (Choice != "Y" && Choice != "y" && Choice != "N" && Choice != "n");
-
-	if (Choice == "Y" || Choice == "y")
-	{
-		system("cls");
-		return 1;
-	}
-
-	else
-	{
-		cout << "GOOD BYE :)\n";
-		return 0;
 	}
 }
 
